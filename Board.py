@@ -145,7 +145,7 @@ class Board():
         """
         if_form = False
 
-        ### TODO
+        ### TODO DONE
         for mile in self.mills:
             if pos in mile:
                 count = 0
