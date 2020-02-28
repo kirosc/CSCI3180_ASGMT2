@@ -73,28 +73,29 @@ class Board():
 
         ### TODO DONE
 
-        if self.state[s] != player.get_symbol() or self.state[t] != '.':
+        elif self.state[s] != player.get_symbol() or self.state[t] != '.':
             valid_flag = False
 
-        path = {
-            0: lambda d: d == 1 or d == 6,
-            1: lambda d: d == 0 or d == 2 or d == 4,
-            2: lambda d: d == 1 or d == 9,
-            3: lambda d: d == 4 or d == 7,
-            4: lambda d: d == 1 or d == 3 or d == 5,
-            5: lambda d: d == 4 or d == 8,
-            6: lambda d: d == 0 or d == 7 or d == 13,
-            7: lambda d: d == 3 or d == 6 or d == 10,
-            8: lambda d: d == 5 or d == 9 or d == 12,
-            9: lambda d: d == 2 or d == 8 or d == 15,
-            10: lambda d: d == 7 or d == 11,
-            11: lambda d: d == 10 or d == 12 or d == 14,
-            12: lambda d: d == 8 or d == 11,
-            13: lambda d: d == 6 or d == 14,
-            14: lambda d: d == 11 or d == 13 or d == 15,
-            15: lambda d: d == 9 or d == 14,
-        }
-        valid_flag = path[s](t)
+        else:
+            path = {
+                0: lambda d: d == 1 or d == 6,
+                1: lambda d: d == 0 or d == 2 or d == 4,
+                2: lambda d: d == 1 or d == 9,
+                3: lambda d: d == 4 or d == 7,
+                4: lambda d: d == 1 or d == 3 or d == 5,
+                5: lambda d: d == 4 or d == 8,
+                6: lambda d: d == 0 or d == 7 or d == 13,
+                7: lambda d: d == 3 or d == 6 or d == 10,
+                8: lambda d: d == 5 or d == 9 or d == 12,
+                9: lambda d: d == 2 or d == 8 or d == 15,
+                10: lambda d: d == 7 or d == 11,
+                11: lambda d: d == 10 or d == 12 or d == 14,
+                12: lambda d: d == 8 or d == 11,
+                13: lambda d: d == 6 or d == 14,
+                14: lambda d: d == 11 or d == 13 or d == 15,
+                15: lambda d: d == 9 or d == 14,
+            }
+            valid_flag = path[s](t)
 
         return valid_flag
 
@@ -110,7 +111,7 @@ class Board():
 
         ### TODO DONE
         ### player is opponent
-        if self.state[pos] != player.get_symbol():
+        elif self.state[pos] != player.get_symbol():
             valid_flag = False
 
         return valid_flag

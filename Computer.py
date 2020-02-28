@@ -18,7 +18,7 @@ class Computer(Player):
         """
         x = random.randint(0, 15)
         ### TODO DONE
-        while self.board.check_put(x):
+        while not self.board.check_put(x):
             x = random.randint(0, 15)
         
         print('{} [Put] (pos): {}'.format( \
@@ -34,7 +34,7 @@ class Computer(Player):
         """
         xs, xt = random.randint(0, 15), random.randint(0, 15)
         ### TODO DONE
-        while self.board.check_move(xs, xt, self):
+        while not self.board.check_move(xs, xt, self):
             xs, xt = random.randint(0, 15), random.randint(0, 15)
 
         print('{} [Move] (from to): {} {}'.format( \
@@ -49,7 +49,7 @@ class Computer(Player):
         """
         x = random.randint(0, 15)
         ### TODO DONE
-        while self.board.check_remove(x, opponent):
+        while not self.board.check_remove(x, opponent):
             x = random.randint(0, 15)
 
         print('{} [Remove] (pos): {}'.format( \
