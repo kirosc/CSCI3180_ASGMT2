@@ -39,8 +39,8 @@ class SaveTheTribe:
 
         self.monsters[4] = Monster(5, randrange(30, 71, 10))
         self.monsters[4].set_pos(1, 4)
-        self.monsters[4].add_hint(2)
-        self.monsters[4].add_hint(6)
+        self.monsters[4].add_drop_item(2)
+        self.monsters[4].add_drop_item(6)
 
         self.monsters[5] = Monster(6, randrange(30, 71, 10))
         self.monsters[5].set_pos(3, 5)
@@ -70,7 +70,7 @@ class SaveTheTribe:
         print('=> Welcome to the desert!')
         print('=> Now you have to defeat the monsters and find the artifact to save the tribe.\n')
 
-        while (self.game_enabled):
+        while self.game_enabled:
             self.map.display_map()
             self.soldier.display_information()
 
