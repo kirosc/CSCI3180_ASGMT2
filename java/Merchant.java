@@ -50,4 +50,8 @@ public class Merchant {
   public void talk(String text) {
     System.out.printf("Merchant$: " + text);
   }
+
+  public void displaySymbol() {
+    System.out.printf("$");
+  }
 }
