@@ -2,10 +2,10 @@ import java.util.HashSet;
 import java.util.Random;
 
 public class Soldier {
-  private int health;
   private int numElixirs;
   private Pos pos;
   private HashSet<Integer> keys;
+  protected int health;
 
   public Soldier() {
     this.health = 100;
