@@ -62,7 +62,7 @@ class Monster:
 
             choice = input('=> What is the next step? (1 = Attack, 2 = Escape, 3 = Use Elixir.) Input: ')
 
-            if choice == 1:
+            if choice == '1':
                 if self.lose_health():
                     print('=> You defeated Monster{}.\n'.format(self.monster_id))
                     self.drop_items(soldier)
@@ -71,10 +71,10 @@ class Monster:
                     if soldier.lose_health():
                         self.recover(self.health_capacity)
                         fight_enabled = False
-            elif choice == 2:
+            elif choice == '2':
                 self.recover(self.health_capacity)
                 fight_enabled = False
-            elif choice == 3:
+            elif choice == '3':
                 if soldier.get_num_elixirs() == 0:
                     print('=> You have run out of elixirs.\n')
                 else:
@@ -90,4 +90,4 @@ class Monster:
         print('Monster{}: {}'.format(self.monster_id, text))
 
     def display_symbol(self):
-        print('M')
+        print('M', end='')

@@ -52,4 +52,4 @@ class Soldier:
         print('Elixirs:', self.num_elixirs)
 
     def display_symbol(self):
-        print('S')
+        print('S', end='')

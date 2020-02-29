@@ -23,4 +23,4 @@ class Spring:
             self.num_chance -= 1
 
     def display_symbol(self):
-        print('@')
+        print('@', end='')

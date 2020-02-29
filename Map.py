@@ -3,12 +3,12 @@ from Cell import Cell
 
 class Map:
     def __init__(self):
-        self.cells = [[Cell() for j in range(7)] for i in range(7)]
+        self.cells = [[Cell() for _ in range(7)] for _ in range(7)]
 
     def add_object(self, object):
-        if type(object) == list:
+        if type(object) is list:
             for monster in object:
-                pos = object.get_pos
+                pos = monster.get_pos()
                 self.cells[pos.get_row() - 1][pos.get_column() - 1].set_occupied_object(monster)
         else:
             pos = object.get_pos()
