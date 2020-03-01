@@ -13,12 +13,12 @@ public class Merchant {
   }
 
   public void actionOnSoldier(Task4Soldier soldier) {
-    this.talk("Do you want to buy something? (1. Elixir, 2. Shield, 3. Leave.) Input: ");
-
     boolean buyEnabled = true;
     Scanner sc = new Scanner(System.in);
 
     while (buyEnabled) {
+      this.talk("Do you want to buy something? (1. Elixir, 2. Shield, 3. Leave.) Input: ");
+
       String choice = sc.nextLine();
 
       if (choice.equalsIgnoreCase("1")) {
