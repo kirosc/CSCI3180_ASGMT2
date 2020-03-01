@@ -12,46 +12,39 @@ class SaveTheTribe:
         self.soldier = Task4Soldier()
         self.spring = Spring()
         self.merchant = Merchant()
-        self.monsters = [None] * 7
+        self.monsters = [Task4Monster(i, randrange(30, 71, 10)) for i in range(1, 8)]
         self.game_enabled = True
 
     def initialize(self):
-        self.monsters[0] = Task4Monster(1, randrange(30, 71, 10))
         self.monsters[0].set_pos(4, 1)
         self.monsters[0].add_drop_item(2)
         self.monsters[0].add_drop_item(3)
 
-        self.monsters[1] = Task4Monster(2, randrange(30, 71, 10))
         self.monsters[1].set_pos(3, 3)
         self.monsters[1].add_drop_item(3)
         self.monsters[1].add_drop_item(6)
         self.monsters[1].add_hint(1)
         self.monsters[1].add_hint(5)
 
-        self.monsters[2] = Task4Monster(3, randrange(30, 71, 10))
         self.monsters[2].set_pos(5, 3)
         self.monsters[2].add_drop_item(4)
         self.monsters[2].add_hint(1)
         self.monsters[2].add_hint(2)
 
-        self.monsters[3] = Task4Monster(4, randrange(30, 71, 10))
         self.monsters[3].set_pos(5, 5)
         self.monsters[3].add_hint(3)
         self.monsters[3].add_hint(6)
 
-        self.monsters[4] = Task4Monster(5, randrange(30, 71, 10))
         self.monsters[4].set_pos(1, 4)
         self.monsters[4].add_drop_item(2)
         self.monsters[4].add_drop_item(6)
 
-        self.monsters[5] = Task4Monster(6, randrange(30, 71, 10))
         self.monsters[5].set_pos(3, 5)
         self.monsters[5].add_drop_item(4)
         self.monsters[5].add_drop_item(7)
         self.monsters[5].add_hint(2)
         self.monsters[5].add_hint(5)
 
-        self.monsters[6] = Task4Monster(7, randrange(30, 71, 10))
         self.monsters[6].set_pos(4, 7)
         self.monsters[6].add_drop_item(-1)
         self.monsters[6].add_hint(6)
