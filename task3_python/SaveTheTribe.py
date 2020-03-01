@@ -95,7 +95,7 @@ class SaveTheTribe:
             if self.map.check_move(new_row, new_column):
                 occupied_object = self.map.get_occupied_object(new_row, new_column)
 
-                if type(occupied_object) is Monster or type(occupied_object) is Spring:
+                if type(occupied_object) is not None:
                     occupied_object.action_on_soldier(self.soldier)
                 else:
                     self.soldier.move(new_row, new_column)
