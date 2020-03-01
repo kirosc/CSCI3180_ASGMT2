@@ -27,7 +27,7 @@ public class Merchant {
           soldier.addElixir();
           System.out.printf("You have bought an Elixir.%n%n");
         } else {
-          System.out.printf("You don't have enough coins.%n%n");
+          this.talk("You don't have enough coins.%n%n");
         }
         buyEnabled = false;
       } else if (choice.equalsIgnoreCase("2")) {
@@ -36,7 +36,7 @@ public class Merchant {
           soldier.addShield();
           System.out.printf("You have bought a Shield.%n%n");
         } else {
-          System.out.printf("You don't have enough coins.%n%n");
+          this.talk("You don't have enough coins.%n%n");
         }
         buyEnabled = false;
       } else if (choice.equalsIgnoreCase("3")) {
