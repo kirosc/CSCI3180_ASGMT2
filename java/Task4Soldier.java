@@ -20,8 +20,15 @@ public class Task4Soldier extends Soldier {
   }
 
   @Override
+  public void displayInformation() {
+    super.displayInformation();
+    System.out.printf("Defence: %d.%n", this.defenseValue);
+    System.out.printf("Coins: %d.%n", this.numCoins);
+  }
+
+  @Override
   public boolean loseHealth() {
-    this.health += this.defenseValue;
+    this.health += Math.min(this.defenseValue, 10);
     return super.loseHealth();
   }
 }

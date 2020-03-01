@@ -47,6 +47,14 @@ public class Merchant {
     }
   }
 
+  public Pos getPos() {
+    return this.pos;
+  }
+
+  public void setPos(int row, int column) {
+    this.pos.setPos(row, column);
+  }
+
   public void talk(String text) {
     System.out.printf("Merchant$: " + text);
   }
