@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Merchant {
+public class Task4Merchant {
 
   private int elixirPrice;
   private int shieldPrice;
   private Pos pos;
 
-  public Merchant() {
+  public Task4Merchant() {
     this.elixirPrice = 1;
     this.shieldPrice = 2;
     this.pos = new Pos();

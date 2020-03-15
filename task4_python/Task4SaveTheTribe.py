@@ -2,7 +2,7 @@ from random import randrange
 from Map import Map
 from Task4Soldier import Task4Soldier
 from Spring import Spring
-from Merchant import Merchant
+from Task4Merchant import Merchant
 from Task4Monster import Task4Monster
 
 

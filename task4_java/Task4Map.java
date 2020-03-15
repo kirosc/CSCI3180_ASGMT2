@@ -25,8 +25,8 @@ public class Task4Map {
         pos = ((Soldier) object).getPos();
       } else if (object instanceof Spring) {
         pos = ((Spring) object).getPos();
-      } else if (object instanceof Merchant) {
-        pos = ((Merchant) object).getPos();
+      } else if (object instanceof Task4Merchant) {
+        pos = ((Task4Merchant) object).getPos();
       }
 
       if (pos != null) {
@@ -51,8 +51,8 @@ public class Task4Map {
             ((Spring) occupiedObject).displaySymbol();
           } else if (occupiedObject instanceof Soldier) {
             ((Soldier) occupiedObject).displaySymbol();
-          } else if (occupiedObject instanceof Merchant) {
-            ((Merchant) occupiedObject).displaySymbol();
+          } else if (occupiedObject instanceof Task4Merchant) {
+            ((Task4Merchant) occupiedObject).displaySymbol();
           }
           System.out.printf(" |");
         } else {

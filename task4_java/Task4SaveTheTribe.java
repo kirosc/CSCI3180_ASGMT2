@@ -5,7 +5,7 @@ public class Task4SaveTheTribe {
   private Task4Map map;
   private Task4Soldier soldier;
   private Spring spring;
-  private Merchant merchant;
+  private Task4Merchant merchant;
   private Task4Monster[] monsters;
 
   private boolean gameEnabled;
@@ -14,7 +14,7 @@ public class Task4SaveTheTribe {
     this.map = new Task4Map();
     this.soldier = new Task4Soldier();
     this.spring = new Spring();
-    this.merchant = new Merchant();
+    this.merchant = new Task4Merchant();
     this.monsters = new Task4Monster[7];
     this.gameEnabled = true;
   }
@@ -122,8 +122,8 @@ public class Task4SaveTheTribe {
           ((Monster)occupiedObject).actionOnSoldier(this.soldier);
         } else if (occupiedObject instanceof Spring) {
           ((Spring)occupiedObject).actionOnSoldier(this.soldier);
-        } else if (occupiedObject instanceof Merchant) {
-          ((Merchant)occupiedObject).actionOnSoldier(this.soldier);
+        } else if (occupiedObject instanceof Task4Merchant) {
+          ((Task4Merchant)occupiedObject).actionOnSoldier(this.soldier);
         } else {
           this.soldier.move(newRow, newColumn);
           this.map.update(this.soldier, oldRow, oldColumn, newRow, newColumn);
